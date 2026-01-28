@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://ckx5wyhsbrtbn" path="res://scenes/spike.tscn" id="5_iywne"]
 [ext_resource type="PackedScene" uid="uid://be6o1b58keqjc" path="res://scenes/moving_spike.tscn" id="6_p57ef"]
 [ext_resource type="PackedScene" uid="uid://42otgsm0wb1" path="res://scenes/key.tscn" id="7_u5sy4"]
+[ext_resource type="PackedScene" uid="uid://cwlllvffi8pyp" path="res://scenes/gate.tscn" id="8_gee14"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lnu2h"]
 texture = ExtResource("2_yqjtg")
@@ -171,3 +172,6 @@ position = Vector2(360, 96)
 
 [node name="Key" parent="Keys" unique_id=1097968565 instance=ExtResource("7_u5sy4")]
 position = Vector2(224, 88)
+
+[node name="Gate" parent="." unique_id=79257486 instance=ExtResource("8_gee14")]
+position = Vector2(1208, -112)
