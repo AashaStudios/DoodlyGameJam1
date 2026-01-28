@@ -178,5 +178,11 @@ position = Vector2(360, 96)
 [node name="Key" parent="Keys" unique_id=1097968565 instance=ExtResource("7_u5sy4")]
 position = Vector2(224, 88)
 
+[node name="Key2" parent="Keys" unique_id=1598523996 instance=ExtResource("7_u5sy4")]
+position = Vector2(624, 88)
+
+[node name="Key3" parent="Keys" unique_id=2141354413 instance=ExtResource("7_u5sy4")]
+position = Vector2(1168, -88)
+
 [node name="Gate" parent="." unique_id=79257486 instance=ExtResource("8_gee14")]
 position = Vector2(1208, -112)
