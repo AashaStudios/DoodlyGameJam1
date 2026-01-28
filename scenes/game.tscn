@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://ttiffgabn35f" path="res://scenes/killzone.tscn" id="4_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://ckx5wyhsbrtbn" path="res://scenes/spike.tscn" id="5_iywne"]
 [ext_resource type="PackedScene" uid="uid://be6o1b58keqjc" path="res://scenes/moving_spike.tscn" id="6_p57ef"]
+[ext_resource type="PackedScene" uid="uid://42otgsm0wb1" path="res://scenes/key.tscn" id="7_u5sy4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lnu2h"]
 texture = ExtResource("2_yqjtg")
@@ -60,7 +61,7 @@ _data = {
 
 [node name="Player" parent="." unique_id=112369351 instance=ExtResource("1_uwrxv")]
 z_index = 5
-position = Vector2(8, 64)
+position = Vector2(8, 112)
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1985321138]
 limit_bottom = 240
@@ -77,6 +78,7 @@ position = Vector2(0, 240)
 shape = SubResource("WorldBoundaryShape2D_iywne")
 
 [node name="Platforms" type="Node2D" parent="." unique_id=362450682]
+z_index = -1
 
 [node name="Platform" parent="Platforms" unique_id=2144402231 instance=ExtResource("3_lnu2h")]
 position = Vector2(1120, 56)
@@ -87,10 +89,13 @@ position = Vector2(1120, 8)
 [node name="Platform3" parent="Platforms" unique_id=1146860789 instance=ExtResource("3_lnu2h")]
 position = Vector2(1120, -40)
 
-[node name="Platform4" parent="Platforms" unique_id=824075790 instance=ExtResource("3_lnu2h")]
+[node name="MovingPlatforms" type="Node2D" parent="." unique_id=302224798]
+z_index = -1
+
+[node name="Platform" parent="MovingPlatforms" unique_id=824075790 instance=ExtResource("3_lnu2h")]
 position = Vector2(864, 104)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Platforms/Platform4" unique_id=1057117975]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MovingPlatforms/Platform" unique_id=1057117975]
 libraries/ = SubResource("AnimationLibrary_gee14")
 autoplay = &"move"
 
@@ -161,3 +166,8 @@ z_index = -1
 
 [node name="MovingSpike" parent="MovingSpikes" unique_id=1293692750 instance=ExtResource("6_p57ef")]
 position = Vector2(360, 96)
+
+[node name="Keys" type="Node2D" parent="." unique_id=217453306]
+
+[node name="Key" parent="Keys" unique_id=1097968565 instance=ExtResource("7_u5sy4")]
+position = Vector2(224, 88)
