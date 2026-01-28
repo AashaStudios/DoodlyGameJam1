@@ -60,9 +60,9 @@ _data = {
 
 [node name="Player" parent="." unique_id=112369351 instance=ExtResource("1_uwrxv")]
 z_index = 5
+position = Vector2(8, 64)
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1985321138]
-zoom = Vector2(4, 4)
 position_smoothing_enabled = true
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=2098127585]
@@ -147,4 +147,4 @@ position = Vector2(1080, 72)
 z_index = -1
 
 [node name="MovingSpike" parent="MovingSpikes" unique_id=1293692750 instance=ExtResource("6_p57ef")]
-position = Vector2(336, 48)
+position = Vector2(360, 48)
