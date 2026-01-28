@@ -1,5 +1,6 @@
 [gd_scene format=4 uid="uid://82o318lqvaww"]
 
+[ext_resource type="Script" uid="uid://d3uu7j6cx3o8w" path="res://scenes/game_manager.gd" id="1_0tnpc"]
 [ext_resource type="PackedScene" uid="uid://dm3yrmuptnl6h" path="res://scenes/player.tscn" id="1_uwrxv"]
 [ext_resource type="Texture2D" uid="uid://ckvk8sl22lncu" path="res://assets/tileset.png" id="2_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://d3fi4vh40j617" path="res://scenes/platform.tscn" id="3_lnu2h"]
@@ -59,6 +60,10 @@ _data = {
 }
 
 [node name="Game" type="Node2D" unique_id=1674291021]
+
+[node name="GameManager" type="Node" parent="." unique_id=1627714495]
+unique_name_in_owner = true
+script = ExtResource("1_0tnpc")
 
 [node name="Player" parent="." unique_id=112369351 instance=ExtResource("1_uwrxv")]
 z_index = 5
