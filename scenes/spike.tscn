@@ -11,4 +11,4 @@ texture = ExtResource("1_7a7y0")
 [node name="Killzone" parent="." unique_id=247628752 instance=ExtResource("2_d2mqm")]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Killzone" unique_id=862800897]
-polygon = PackedVector2Array(-8, 8, 8, 8, 0, -7)
+polygon = PackedVector2Array(-8, 8, 8, 8, 5, -6, -5, -6)
