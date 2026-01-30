@@ -7,6 +7,7 @@
 size = Vector2(20, 64)
 
 [node name="Gate" type="StaticBody2D" unique_id=79257486]
+z_index = -1
 collision_mask = 2
 script = ExtResource("1_xwxio")
 

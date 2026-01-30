@@ -461,7 +461,6 @@ position = Vector2(0, 240)
 shape = SubResource("WorldBoundaryShape2D_iywne")
 
 [node name="Platforms" type="Node2D" parent="." unique_id=362450682]
-z_index = -1
 
 [node name="Platform" parent="Platforms" unique_id=2144402231 instance=ExtResource("3_lnu2h")]
 position = Vector2(1120, 56)
@@ -473,7 +472,6 @@ position = Vector2(1120, 8)
 position = Vector2(1120, -40)
 
 [node name="MovingPlatforms" type="Node2D" parent="." unique_id=302224798]
-z_index = -1
 
 [node name="Platform" parent="MovingPlatforms" unique_id=824075790 instance=ExtResource("3_lnu2h")]
 position = Vector2(864, 104)
@@ -545,7 +543,6 @@ position = Vector2(552, 136)
 position = Vector2(568, 136)
 
 [node name="MovingSpikes" type="Node2D" parent="." unique_id=186773195]
-z_index = -1
 
 [node name="MovingSpike" parent="MovingSpikes" unique_id=1293692750 instance=ExtResource("6_p57ef")]
 position = Vector2(360, 96)
