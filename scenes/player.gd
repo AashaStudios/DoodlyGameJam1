@@ -6,6 +6,7 @@ const ACCELERATION: int = 10
 const FRICTION: int = 15
 const JUMP_VELOCITY: int = -300
 
+var coyote_time_activated: bool = false
 
 @onready var jump_buffer_timer: Timer = $Timer/JumpBufferTimer
 @onready var coyote_timer: Timer = $Timer/CoyoteTimer
@@ -33,4 +34,22 @@ func run(delta: float, direction: float) -> void:
 
 
 func jump() -> void:
-    pass
+    if is_on_floor():
+        coyote_time_activated = false
+    else:
+        if coyote_timer.is_stopped() and !coyote_time_activated:
+            coyote_timer.start()
+            coyote_time_activated = true
+        
+        if Input.is_action_just_released("jump") or is_on_ceiling():
+            velocity.y *= 0.25
+    
+    if Input.is_action_just_pressed("jump"):
+        if jump_buffer_timer.is_stopped():
+            jump_buffer_timer.start()
+    
+    if !jump_buffer_timer.is_stopped() and (!coyote_timer.is_stopped() or is_on_floor()):
+        velocity.y = JUMP_VELOCITY
+        jump_buffer_timer.stop()
+        coyote_timer.stop()
+        coyote_time_activated = true

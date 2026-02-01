@@ -22,6 +22,8 @@ shape = SubResource("CircleShape2D_3vyb7")
 
 [node name="JumpBufferTimer" type="Timer" parent="Timer" unique_id=1589421502]
 wait_time = 0.1
+one_shot = true
 
 [node name="CoyoteTimer" type="Timer" parent="Timer" unique_id=628371406]
 wait_time = 0.1
+one_shot = true
