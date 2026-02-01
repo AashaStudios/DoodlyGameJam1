@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://cfk4ps1fah6yp"]
+
+[ext_resource type="Script" uid="uid://dpg31bh4iiwpi" path="res://scenes/interaction_manager.gd" id="1_guivl"]
+[ext_resource type="FontFile" uid="uid://xmdxo5l4ygmd" path="res://assets/minecraft.ttf" id="1_rddhf"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_guivl"]
+font = ExtResource("1_rddhf")
+
+[node name="InteractionManager" type="Node2D" unique_id=787798954]
+script = ExtResource("1_guivl")
+
+[node name="Label" type="Label" parent="." unique_id=268666686]
+z_index = 20
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -70.0
+offset_right = 70.0
+offset_bottom = 16.0
+grow_horizontal = 2
+text = "[Z] TO INTERACT"
+label_settings = SubResource("LabelSettings_guivl")
+horizontal_alignment = 1
+vertical_alignment = 1
