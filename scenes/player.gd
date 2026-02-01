@@ -1,8 +1,10 @@
 extends CharacterBody2D
 
 
-const SPEED = 200
-const JUMP_VELOCITY = -300
+const SPEED: int = 200
+const ACCELERATION: int = 10
+const FRICTION: int = 15
+const JUMP_VELOCITY: int = -300
 
 
 @onready var jump_buffer_timer: Timer = $Timer/JumpBufferTimer
@@ -17,16 +19,17 @@ func _physics_process(delta: float) -> void:
     # Handle jump.
     if Input.is_action_just_pressed("jump") and is_on_floor():
         velocity.y = JUMP_VELOCITY
-
-    # Get the input direction and handle the movement/deceleration.
-    # As good practice, you should replace UI actions with custom gameplay actions.
+    
     var direction := Input.get_axis("left", "right")
-    if direction:
-        velocity.x = direction * SPEED
-    else:
-        velocity.x = move_toward(velocity.x, 0, SPEED)
+    
+    run(delta, direction)
 
     move_and_slide()
+
+
+func run(delta: float, direction: float) -> void:
+    var body_weight: float = delta * (ACCELERATION if direction else FRICTION)
+    velocity.x = lerp(velocity.x, direction * SPEED, body_weight)
 
 
 func jump() -> void:
