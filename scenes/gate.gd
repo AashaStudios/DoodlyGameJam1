@@ -2,10 +2,13 @@ extends StaticBody2D
 
 
 @onready var game_manager: Node = %GameManager
+@onready var interaction_area: InteractionArea = $InteractionArea
 
 
-func _process(_delta: float) -> void:
+func _ready() -> void:
+    interaction_area.interact = Callable(self, "_on_interact")
+
+
+func _on_interact():
     if game_manager.keys == 3:
-        var gate_open_tween := create_tween()
-        gate_open_tween.tween_property($Sprite2D, "position", Vector2(0, -64), 1)
-        gate_open_tween.tween_property($CollisionShape2D, "disabled", true, 0)
+        queue_free()

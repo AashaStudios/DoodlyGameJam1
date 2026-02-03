@@ -3,13 +3,14 @@
 [ext_resource type="Script" uid="uid://dmxkm8kcj0wdt" path="res://scenes/level_transition.gd" id="1_g1ell"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vqo1y"]
-size = Vector2(16, 16)
+size = Vector2(16, 64)
 
 [node name="LevelTransition" type="Area2D" unique_id=1100962475]
 collision_mask = 2
 script = ExtResource("1_g1ell")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=337845985]
+position = Vector2(0, -24)
 shape = SubResource("RectangleShape2D_vqo1y")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
