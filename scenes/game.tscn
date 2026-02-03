@@ -9,8 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://42otgsm0wb1" path="res://scenes/key.tscn" id="7_u5sy4"]
 [ext_resource type="PackedScene" uid="uid://cwlllvffi8pyp" path="res://scenes/gate.tscn" id="8_gee14"]
 [ext_resource type="PackedScene" uid="uid://dvp6228m821h1" path="res://scenes/level_transition.tscn" id="10_vtaks"]
+[ext_resource type="PackedScene" uid="uid://bhtk04vniofgm" path="res://scenes/screen_effect.tscn" id="11_kvpfn"]
 [ext_resource type="PackedScene" uid="uid://b2b60qxnmke04" path="res://scenes/hud.tscn" id="12_dinhu"]
-[ext_resource type="Shader" uid="uid://cik2s3qn4pkmu" path="res://misc/screen_effect.gdshader" id="12_kvuet"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_iywne"]
 
@@ -51,16 +51,6 @@ _data = {
 &"RESET": SubResource("Animation_p57ef"),
 &"move": SubResource("Animation_u5sy4")
 }
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_trtic"]
-shader = ExtResource("12_kvuet")
-shader_parameter/resolution = Vector2(320, 180)
-shader_parameter/scan_line_amount = 0.5
-shader_parameter/warp_amount = 0.05
-shader_parameter/vignette_amount = 0.5
-shader_parameter/vignette_intensity = 0.3
-shader_parameter/grille_amount = 0.05
-shader_parameter/brightness_boost = 1.2
 
 [node name="Game" type="Node2D" unique_id=1674291021]
 
@@ -190,11 +180,4 @@ level = "res://scenes/level_2.tscn"
 
 [node name="HUD" parent="UI" unique_id=448685970 instance=ExtResource("12_dinhu")]
 
-[node name="ColorRect" type="ColorRect" parent="UI" unique_id=2094646883]
-material = SubResource("ShaderMaterial_trtic")
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
+[node name="ScreenEffect" parent="UI" unique_id=2033616894 instance=ExtResource("11_kvpfn")]

@@ -8,7 +8,7 @@ const JUMP_VELOCITY: int = -300
 
 var coyote_time_activated: bool = false
 
-@onready var sprite: Sprite2D = $Sprite2D
+@onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var jump_buffer_timer: Timer = $Timer/JumpBufferTimer
 @onready var coyote_timer: Timer = $Timer/CoyoteTimer
 

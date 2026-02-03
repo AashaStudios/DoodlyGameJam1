@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://bhtk04vniofgm"]
+
+[ext_resource type="Shader" uid="uid://cik2s3qn4pkmu" path="res://misc/screen_effect.gdshader" id="1_y61co"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_trtic"]
+shader = ExtResource("1_y61co")
+shader_parameter/resolution = Vector2(320, 180)
+shader_parameter/scan_line_amount = 0.5
+shader_parameter/warp_amount = 0.05
+shader_parameter/vignette_amount = 0.5
+shader_parameter/vignette_intensity = 0.3
+shader_parameter/grille_amount = 0.05
+shader_parameter/brightness_boost = 1.2
+
+[node name="ScreenEffect" type="ColorRect" unique_id=2033616894]
+material = SubResource("ShaderMaterial_trtic")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
