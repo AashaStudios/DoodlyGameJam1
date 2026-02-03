@@ -9,7 +9,6 @@
 [ext_resource type="PackedScene" uid="uid://42otgsm0wb1" path="res://scenes/key.tscn" id="7_u5sy4"]
 [ext_resource type="PackedScene" uid="uid://cwlllvffi8pyp" path="res://scenes/gate.tscn" id="8_gee14"]
 [ext_resource type="PackedScene" uid="uid://dvp6228m821h1" path="res://scenes/level_transition.tscn" id="10_vtaks"]
-[ext_resource type="PackedScene" uid="uid://ck8asg1u2d0nc" path="res://scenes/level_2.tscn" id="11_kvpfn"]
 [ext_resource type="PackedScene" uid="uid://b2b60qxnmke04" path="res://scenes/hud.tscn" id="12_dinhu"]
 [ext_resource type="Shader" uid="uid://cik2s3qn4pkmu" path="res://misc/screen_effect.gdshader" id="12_kvuet"]
 
@@ -185,7 +184,7 @@ position = Vector2(1208, -112)
 
 [node name="LevelTransition" parent="." unique_id=1100962475 instance=ExtResource("10_vtaks")]
 position = Vector2(1336, -88)
-level = ExtResource("11_kvpfn")
+level = "res://scenes/level_2.tscn"
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=845095154]
 

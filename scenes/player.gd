@@ -40,7 +40,7 @@ func jump() -> void:
             coyote_time_activated = true
         
         if Input.is_action_just_released("jump") or is_on_ceiling():
-            velocity.y *= 0.25
+            velocity.y *= 0.1
     
     if Input.is_action_just_pressed("jump"):
         if jump_buffer_timer.is_stopped():

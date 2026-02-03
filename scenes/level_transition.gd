@@ -1,8 +1,8 @@
 extends Area2D
 
 
-@export var level: PackedScene
+@export var level: String
 
 
 func _on_body_entered(_body: Node2D) -> void:
-    get_tree().call_deferred("change_scene_to_packed", level)
+    SceneTransition.change_scene_to(level)
