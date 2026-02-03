@@ -162,10 +162,10 @@ position = Vector2(568, 136)
 [node name="Keys" type="Node" parent="." unique_id=1991724943]
 
 [node name="Key" parent="Keys" unique_id=1097968565 instance=ExtResource("7_np2pn")]
-position = Vector2(224, 88)
+position = Vector2(240, 120)
 
 [node name="Key2" parent="Keys" unique_id=1598523996 instance=ExtResource("7_np2pn")]
-position = Vector2(624, 88)
+position = Vector2(624, 104)
 
 [node name="Key3" parent="Keys" unique_id=2141354413 instance=ExtResource("7_np2pn")]
 position = Vector2(1168, -88)
