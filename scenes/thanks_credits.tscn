@@ -1,0 +1,100 @@
+[gd_scene format=3 uid="uid://dvllla471fh5w"]
+
+[ext_resource type="Script" uid="uid://d3uu7j6cx3o8w" path="res://scenes/game_manager.gd" id="1_ycjtn"]
+[ext_resource type="PackedScene" uid="uid://bhtk04vniofgm" path="res://scenes/screen_effect.tscn" id="2_0i1uq"]
+[ext_resource type="FontFile" uid="uid://xmdxo5l4ygmd" path="res://assets/minecraft.ttf" id="3_ft6kq"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ni1xo"]
+font = ExtResource("3_ft6kq")
+font_size = 32
+
+[sub_resource type="LabelSettings" id="LabelSettings_ycjtn"]
+font = ExtResource("3_ft6kq")
+
+[sub_resource type="LabelSettings" id="LabelSettings_0i1uq"]
+font = ExtResource("3_ft6kq")
+
+[sub_resource type="LabelSettings" id="LabelSettings_ft6kq"]
+font = ExtResource("3_ft6kq")
+
+[node name="ThanksCredits" type="CanvasLayer" unique_id=275424335]
+
+[node name="GameManager" type="Node" parent="." unique_id=588281256]
+unique_name_in_owner = true
+script = ExtResource("1_ycjtn")
+
+[node name="ScreenEffect" parent="." unique_id=2033616894 instance=ExtResource("2_0i1uq")]
+z_index = 10
+
+[node name="Thanks" type="Label" parent="." unique_id=1312633414]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -149.0
+offset_top = -104.0
+offset_right = 149.0
+offset_bottom = -72.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Thanks For Playing"
+label_settings = SubResource("LabelSettings_ni1xo")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Details" type="Label" parent="." unique_id=1874119597]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -84.0
+offset_top = -64.0
+offset_right = 84.0
+offset_bottom = -29.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Game By AashaStuios
+Developer: Vespine"
+label_settings = SubResource("LabelSettings_ycjtn")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DeveloperNote" type="Label" parent="." unique_id=190289585]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -155.0
+offset_top = -24.0
+offset_right = 155.0
+offset_bottom = 49.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Note: Hello and thanks again for playing
+the game. I made this game for Doodly
+game Jam. My goal for this game was to
+just finish the game and that's it, BYE!"
+label_settings = SubResource("LabelSettings_0i1uq")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Credits" type="Label" parent="." unique_id=913407275]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = 64.0
+offset_right = 150.0
+offset_bottom = 99.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Music is from Brackey's Game Tutorial
+Assets are Retro Lines By VEXED"
+label_settings = SubResource("LabelSettings_ft6kq")
+horizontal_alignment = 1
+vertical_alignment = 1

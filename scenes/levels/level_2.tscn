@@ -143,7 +143,7 @@ position = Vector2(2312, -80)
 
 [node name="LevelTransition" parent="." unique_id=1100962475 instance=ExtResource("9_sibr7")]
 position = Vector2(2488, -56)
-level = "res://scenes/levels/level_3.tscn"
+level = "res://scenes/thanks_credits.tscn"
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=1724067462]
 
