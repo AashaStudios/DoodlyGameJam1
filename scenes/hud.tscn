@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://ctf5xqa1fn134" path="res://scenes/hud.gd" id="1_oo0fn"]
 [ext_resource type="FontFile" uid="uid://xmdxo5l4ygmd" path="res://assets/minecraft.ttf" id="2_5ysmq"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_oo0fn"]
+
 [sub_resource type="LabelSettings" id="LabelSettings_6fi6k"]
 font = ExtResource("2_5ysmq")
 
@@ -21,6 +23,7 @@ offset_left = 8.0
 offset_top = 8.0
 offset_right = 72.0
 offset_bottom = 40.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_oo0fn")
 
 [node name="KeyCounterLabel" type="Label" parent="KeyCounter" unique_id=1244722884]
 layout_mode = 1

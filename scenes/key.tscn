@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://d2f0wtnekjraa" path="res://scenes/key.gd" id="1_fttkb"]
 [ext_resource type="Texture2D" uid="uid://de504luq7uc4m" path="res://assets/key.png" id="1_yk2u2"]
 [ext_resource type="PackedScene" uid="uid://cupjn6438drov" path="res://scenes/interaction_area.tscn" id="3_wy8tx"]
+[ext_resource type="AudioStream" uid="uid://dqopt82vye0n5" path="res://assets/coin.wav" id="4_brs3p"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fttkb"]
 radius = 14.0
@@ -20,3 +21,6 @@ action_name = "COLLECT"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea" unique_id=2004592394]
 shape = SubResource("CircleShape2D_fttkb")
+
+[node name="PickupSound" type="AudioStreamPlayer2D" parent="." unique_id=1218419662]
+stream = ExtResource("4_brs3p")
