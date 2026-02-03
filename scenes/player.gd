@@ -58,3 +58,11 @@ func animation(direction: float) -> void:
         sprite.flip_h = false
     elif direction < 0:
         sprite.flip_h = true
+    
+    if is_on_floor():
+        if not direction:
+            sprite.play("idle")
+        else:
+            sprite.play("run")
+    else:
+        sprite.play("jump")

@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://dvp6228m821h1" path="res://scenes/level_transition.tscn" id="10_vtaks"]
 [ext_resource type="PackedScene" uid="uid://bhtk04vniofgm" path="res://scenes/screen_effect.tscn" id="11_kvpfn"]
 [ext_resource type="PackedScene" uid="uid://b2b60qxnmke04" path="res://scenes/hud.tscn" id="12_dinhu"]
+[ext_resource type="PackedScene" uid="uid://tsmuxx4x1npk" path="res://scenes/enemy.tscn" id="12_kvuet"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_iywne"]
 
@@ -181,3 +182,6 @@ level = "res://scenes/level_2.tscn"
 [node name="HUD" parent="UI" unique_id=448685970 instance=ExtResource("12_dinhu")]
 
 [node name="ScreenEffect" parent="UI" unique_id=2033616894 instance=ExtResource("11_kvpfn")]
+
+[node name="Enemy" parent="." unique_id=1711963868 instance=ExtResource("12_kvuet")]
+position = Vector2(72, 144)
